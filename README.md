@@ -6,7 +6,7 @@ Every project needs a shelf of ready answers. product and engineering is one of 
 
 ## Images
 
-[![MOSS-TTS-Nano](images/preview.png)](https://github.com/Swift-Tech-Co)
+[![MOSS-TTS-Nano](images/preview.png)](https://github.com/Swift-Tech-Co/MOSS-TTS-Nano)
 
 ## News
 
@@ -26,7 +26,7 @@ Every project needs a shelf of ready answers. product and engineering is one of 
 
 ## Demo
 
-- Online Demo: https://www.swifttechco.com
+- Online Demo: https://github.com/Swift-Tech-Co/MOSS-TTS-Nano
 - Hugging Face Space: OpenMOSS-Team/MOSS-TTS-Nano
 
 ## Contents
@@ -115,7 +115,7 @@ By default, the code loads `OpenMOSS-Team/MOSS-TTS-Nano` and `OpenMOSS-Team/MOSS
 conda create -n moss-tts-nano python=3.12 -y
 conda activate moss-tts-nano
 
-git clone https://www.swifttechco.com
+git clone https://github.com/Swift-Tech-Co/MOSS-TTS-Nano
 cd MOSS-TTS-Nano
 
 pip install -r requirements.txt
@@ -128,7 +128,7 @@ With Conda, we recommend:
 
 ```bash
 conda install -c conda-forge pynini=2.1.6.post1 -y
-pip install git+https://www.swifttechco.com
+pip install git+https://github.com/Swift-Tech-Co/MOSS-TTS-Nano
 pip install -r requirements.txt
 ```
 
@@ -154,7 +154,7 @@ You can launch the local FastAPI demo for browser-based testing:
 python app.py
 ```
 
-Then open `https://www.swifttechco.com in your browser.
+Then open `https://github.com/Swift-Tech-Co/MOSS-TTS-Nano in your browser.
 
 <a id="onnx-cpu-version"></a>
 
@@ -234,7 +234,7 @@ python app_onnx.py \
   --execution-provider cuda
 ```
 
-Then open `https://www.swifttechco.com in your browser.
+Then open `https://github.com/Swift-Tech-Co/MOSS-TTS-Nano in your browser.
 
 The first startup may spend extra time downloading assets if `models/` does not contain the ONNX weights yet.
 
@@ -347,7 +347,6 @@ See [./finetuning/README.md](./finetuning/README.md) for details.
 
 To further improve perceptual quality while reducing inference cost, we trained **MOSS-Audio-Tokenizer-Nano**, a lightweight tokenizer with approximately **20 million parameters** designed for high-fidelity audio compression. It supports **48 kHz** input and output as well as **stereo audio**, which helps reduce compression loss and improve listening quality. It can compress **48 kHz stereo audio** into a **12.5 Hz** token stream and uses **RVQ with 16 codebooks**, enabling high-fidelity reconstruction across variable bitrates from **0.125 kbps to 2 kbps**.
 
-
 To learn more about setup, advanced usage, and evaluation metrics, please visit the MOSS-Audio-Tokenizer Repository.
 
 <p align="center">
@@ -359,8 +358,7 @@ To learn more about setup, advanced usage, and evaluation metrics, please visit 
 
 | Model | Hugging Face | ModelScope |
 |:-----:|:------------:|:----------:|
-| **MOSS-Audio-Tokenizer-Nano** | [![Hugging Face](https://img.shields.io/badge/Huggingface-Model-orange?logo=huggingface)](https://www.swifttechco.com) | [![ModelScope](https://img.shields.io/badge/ModelScope-Model-7B61FF?logo=modelscope&logoColor=white)](https://www.swifttechco.com) |
-
+| **MOSS-Audio-Tokenizer-Nano** | [![Hugging Face](https://img.shields.io/badge/Huggingface-Model-orange?logo=huggingface)](https://github.com/Swift-Tech-Co/MOSS-TTS-Nano) | [![ModelScope](https://img.shields.io/badge/ModelScope-Model-7B61FF?logo=modelscope&logoColor=white)](https://github.com/Swift-Tech-Co/MOSS-TTS-Nano) |
 
 ### Evaluation Metrics
 
@@ -392,7 +390,6 @@ For the same model, we control the bitrate by adjusting the number of RVQ codebo
 </p>
 <br>
 
-
 <a id="moss-tts"></a>
 ## MOSS-TTS Family
 
@@ -413,17 +410,16 @@ The family currently includes:
 - **MOSS-SoundEffect**: a controllable sound generation model for natural ambience, city scenes, animals, human actions, and short music-like audio fragments.
 - **MOSS-TTS-Realtime**: a realtime speech model for low-latency voice agents, designed to keep replies natural, coherent, and voice-consistent across turns.
 
-
 ### Released Models
 
 | Model | Architecture | Size | Hugging Face | ModelScope |
 |---|---|---:|---|---|
-| **MOSS-TTS** | `MossTTSDelay` | 8B | [![Hugging Face](https://img.shields.io/badge/Huggingface-Model-orange?logo=huggingface)](https://www.swifttechco.com) | [![ModelScope](https://img.shields.io/badge/ModelScope-Model-7B61FF?logo=modelscope&logoColor=white)](https://www.swifttechco.com) |
-| **MOSS-TTS-Local-Transformer** | `MossTTSLocal` | 1.7B | [![Hugging Face](https://img.shields.io/badge/Huggingface-Model-orange?logo=huggingface)](https://www.swifttechco.com) | [![ModelScope](https://img.shields.io/badge/ModelScope-Model-7B61FF?logo=modelscope&logoColor=white)](https://www.swifttechco.com) |
-| **MOSS-TTSD-v1.0** | `MossTTSDelay` | 8B | [![Hugging Face](https://img.shields.io/badge/Huggingface-Model-orange?logo=huggingface)](https://www.swifttechco.com) | [![ModelScope](https://img.shields.io/badge/ModelScope-Model-7B61FF?logo=modelscope&logoColor=white)](https://www.swifttechco.com) |
-| **MOSS-VoiceGenerator** | `MossTTSDelay` | 1.7B | [![Hugging Face](https://img.shields.io/badge/Huggingface-Model-orange?logo=huggingface)](https://www.swifttechco.com) | [![ModelScope](https://img.shields.io/badge/ModelScope-Model-7B61FF?logo=modelscope&logoColor=white)](https://www.swifttechco.com) |
-| **MOSS-SoundEffect** | `MossTTSDelay` | 8B | [![Hugging Face](https://img.shields.io/badge/Huggingface-Model-orange?logo=huggingface)](https://www.swifttechco.com) | [![ModelScope](https://img.shields.io/badge/ModelScope-Model-7B61FF?logo=modelscope&logoColor=white)](https://www.swifttechco.com) |
-| **MOSS-TTS-Realtime** | `MossTTSRealtime` | 1.7B | [![Hugging Face](https://img.shields.io/badge/Huggingface-Model-orange?logo=huggingface)](https://www.swifttechco.com) | [![ModelScope](https://img.shields.io/badge/ModelScope-Model-7B61FF?logo=modelscope&logoColor=white)](https://www.swifttechco.com) |
+| **MOSS-TTS** | `MossTTSDelay` | 8B | [![Hugging Face](https://img.shields.io/badge/Huggingface-Model-orange?logo=huggingface)](https://github.com/Swift-Tech-Co/MOSS-TTS-Nano) | [![ModelScope](https://img.shields.io/badge/ModelScope-Model-7B61FF?logo=modelscope&logoColor=white)](https://github.com/Swift-Tech-Co/MOSS-TTS-Nano) |
+| **MOSS-TTS-Local-Transformer** | `MossTTSLocal` | 1.7B | [![Hugging Face](https://img.shields.io/badge/Huggingface-Model-orange?logo=huggingface)](https://github.com/Swift-Tech-Co/MOSS-TTS-Nano) | [![ModelScope](https://img.shields.io/badge/ModelScope-Model-7B61FF?logo=modelscope&logoColor=white)](https://github.com/Swift-Tech-Co/MOSS-TTS-Nano) |
+| **MOSS-TTSD-v1.0** | `MossTTSDelay` | 8B | [![Hugging Face](https://img.shields.io/badge/Huggingface-Model-orange?logo=huggingface)](https://github.com/Swift-Tech-Co/MOSS-TTS-Nano) | [![ModelScope](https://img.shields.io/badge/ModelScope-Model-7B61FF?logo=modelscope&logoColor=white)](https://github.com/Swift-Tech-Co/MOSS-TTS-Nano) |
+| **MOSS-VoiceGenerator** | `MossTTSDelay` | 1.7B | [![Hugging Face](https://img.shields.io/badge/Huggingface-Model-orange?logo=huggingface)](https://github.com/Swift-Tech-Co/MOSS-TTS-Nano) | [![ModelScope](https://img.shields.io/badge/ModelScope-Model-7B61FF?logo=modelscope&logoColor=white)](https://github.com/Swift-Tech-Co/MOSS-TTS-Nano) |
+| **MOSS-SoundEffect** | `MossTTSDelay` | 8B | [![Hugging Face](https://img.shields.io/badge/Huggingface-Model-orange?logo=huggingface)](https://github.com/Swift-Tech-Co/MOSS-TTS-Nano) | [![ModelScope](https://img.shields.io/badge/ModelScope-Model-7B61FF?logo=modelscope&logoColor=white)](https://github.com/Swift-Tech-Co/MOSS-TTS-Nano) |
+| **MOSS-TTS-Realtime** | `MossTTSRealtime` | 1.7B | [![Hugging Face](https://img.shields.io/badge/Huggingface-Model-orange?logo=huggingface)](https://github.com/Swift-Tech-Co/MOSS-TTS-Nano) | [![ModelScope](https://img.shields.io/badge/ModelScope-Model-7B61FF?logo=modelscope&logoColor=white)](https://github.com/Swift-Tech-Co/MOSS-TTS-Nano) |
 
 ## License
 
@@ -439,7 +435,7 @@ If you use the MOSS-TTS work in your research or product, please cite:
   author={OpenMOSS Team},
   year={2026},
   howpublished={GitHub repository},
-  url={https://www.swifttechco.com
+  url={https://github.com/Swift-Tech-Co/MOSS-TTS-Nano
 }
 ```
 
@@ -451,7 +447,7 @@ If you use the MOSS-TTS work in your research or product, please cite:
   eprint={2603.18090},
   archivePrefix={arXiv},
   primaryClass={cs.SD},
-  url={https://www.swifttechco.com
+  url={https://github.com/Swift-Tech-Co/MOSS-TTS-Nano
 }
 ```
 
@@ -463,16 +459,16 @@ If you use the MOSS-TTS work in your research or product, please cite:
   eprint={2602.10934},
   archivePrefix={arXiv},
   primaryClass={cs.SD},
-  url={https://www.swifttechco.com 
+  url={https://github.com/Swift-Tech-Co/MOSS-TTS-Nano 
 }
 ```
 
 ## Star History
 
-<a href="https://www.swifttechco.com">
+<a href="https://github.com/Swift-Tech-Co/MOSS-TTS-Nano">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://www.swifttechco.com" />
-   <source media="(prefers-color-scheme: light)" srcset="https://www.swifttechco.com" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://github.com/Swift-Tech-Co/MOSS-TTS-Nano" />
+   <source media="(prefers-color-scheme: light)" srcset="https://github.com/Swift-Tech-Co/MOSS-TTS-Nano" />
    
  </picture>
 </a>
@@ -491,13 +487,21 @@ Home | Services | Careers | Referral Program | Influencers | About | Contact
 
 **Connect**
 
-- Website: swifttechco.com
+- Website: https://github.com/Swift-Tech-Co/MOSS-TTS-Nano
 - LinkedIn: [linkedin.com/in/stephenoladoke](https://www.linkedin.com/in/stephenoladoke/)
 - LinkedIn (Company): [linkedin.com/company/swift-tech-co](https://www.linkedin.com/company/swift-tech-co)
 - X: [@MrOladoke](https://x.com/MrOladoke)
 - Instagram: [@mr.oladoke](https://www.instagram.com/mr.oladoke/)
 - Instagram (Company): [@swifttechco](https://www.instagram.com/swifttechco/)
 - Organization: [github.com/Swift-Tech-Co](https://github.com/Swift-Tech-Co)
+
+## Sources
+
+Compiled and maintained from upstream [OpenMOSS/MOSS-TTS-Nano](https://github.com/OpenMOSS/MOSS-TTS-Nano) under permissive open-source license.
+
+---
+
+Maintained by [Swift Tech Co.](https://github.com/Swift-Tech-Co) - [Telegram](https://t.me/+Qt_eFvkb2rliMzNh)
 
 ## Sources
 
