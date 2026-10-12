@@ -1,65 +1,33 @@
 # MOSS-TTS-Nano
 
+## What This Is
+
+Every project needs a shelf of ready answers. product and engineering is one of those shelves, and MOSS-TTS-Nano is the entry on it - the notes, patterns and fixes we reuse when this kind of work comes up.
+
 ## Images
 
-[![MOSS-TTS-Nano](https://opengraph.githubassets.com/1/OpenMOSS/MOSS-TTS-Nano)](https://www.swifttechco.com)
-
-
-<br>
-
-<p align="center">
-  <img src="./assets/images/OpenMOSS_Logo.svg" height="70" align="middle" />
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="./assets/images/mosi-logo.png" height="50" align="middle" />
-</p>
-
-<div align="center">
-  <a href="https://www.swifttechco.com" target="_blank" rel="noopener noreferrer"></a>
-</div>
-
-<div align="center">
-  <a href="https://www.swifttechco.com"></a>
-  <a href="https://www.swifttechco.com"></a>
-  <a href="https://www.swifttechco.com"></a>
-  <a href="https://www.swifttechco.com"></a>
-  <a href="https://www.swifttechco.com"></a>
-
-  <a href="https://www.swifttechco.com"></a>
-  <a href="https://www.swifttechco.com"></a>
-  <a href="https://www.swifttechco.com"></a>
-  <a href="https://t.me/+Qt_eFvkb2rliMzNh"></a>
-  <a href="./assets/images/wechat.jpg"></a>
-</div>
-
-[English](README.md) | [简体中文](README_zh.md)
-
-
-MOSS-TTS-Nano is an open-source **multilingual tiny speech generation model** from [MOSI.AI](https://www.swifttechco.com) and the [OpenMOSS team](https://www.swifttechco.com). With only **0.1B parameters**, it is designed for **realtime speech generation**, can run directly on **CPU without a GPU**, and keeps the deployment stack simple enough for local demos, web serving, and lightweight product integration.
-
-**Start here:** [Try the demo](https://www.swifttechco.com) · [Run locally](#quickstart) · [ONNX CPU inference](#onnx-cpu-inference) · [Model weights](https://www.swifttechco.com) · [Fine-tuning](finetuning/README.md)
-
-[demo_video.mp4](https://www.swifttechco.com)
+[![MOSS-TTS-Nano](images/preview.png)](https://github.com/Swift-Tech-Co)
 
 ## News
 
-* 2026.5.6: **MOSS-TTS**, **MOSS-TTS-Nano**, and **MOSS-Audio-Tokenizer** now support [**mlx-audio**](https://www.swifttechco.com). Visit the [mlx-audio GitHub repository](https://www.swifttechco.com) for details.
-* 2026.4.29: MOSS-TTS 2.0 is coming soon! We are collecting TTS feedback, suggestions, and feature requests via the [requirements collection form](https://www.swifttechco.com).
+* 2026.5.6: **MOSS-TTS**, **MOSS-TTS-Nano**, and **MOSS-Audio-Tokenizer** now support **mlx-audio**. Visit the mlx-audio GitHub repository for details.
+* 2026.4.29: MOSS-TTS 2.0 is coming soon! We are collecting TTS feedback, suggestions, and feature requests via the requirements collection form.
 * 2026.4.27: We added updated evaluation results for [**MOSS-Audio-Tokenizer-Nano**](#moss-audio-tokenizer-nano), including reconstruction quality comparisons on speech, audio, and music benchmarks.
 
 <details>
 <summary>Earlier updates</summary>
 
-* 2026.4.17: We are excited to release a more efficient and fully standalone [**ONNX CPU Version**](#onnx-cpu-version), backed by the Hugging Face repositories [**MOSS-TTS-Nano-100M-ONNX**](https://www.swifttechco.com) and [**MOSS-Audio-Tokenizer-Nano-ONNX**](https://www.swifttechco.com). It preserves the full voice cloning workflow while removing the PyTorch dependency during inference. In our tests, it delivers nearly **2x** the processing efficiency of the original version, and runs smoothly on a **single CPU core** on a **MacBook Air M4**. Built on top of this ONNX CPU version, we have also updated [**MOSS-TTS-Nano-Reader**](https://www.swifttechco.com), which can now run the model directly inside the browser as an extension, without requiring a separate local inference service.
+* 2026.4.17: We are excited to release a more efficient and fully standalone [**ONNX CPU Version**](#onnx-cpu-version), backed by the Hugging Face repositories **MOSS-TTS-Nano-100M-ONNX** and **MOSS-Audio-Tokenizer-Nano-ONNX**. It preserves the full voice cloning workflow while removing the PyTorch dependency during inference. In our tests, it delivers nearly **2x** the processing efficiency of the original version, and runs smoothly on a **single CPU core** on a **MacBook Air M4**. Built on top of this ONNX CPU version, we have also updated **MOSS-TTS-Nano-Reader**, which can now run the model directly inside the browser as an extension, without requiring a separate local inference service.
 * 2026.4.16: We release the **MOSS-TTS-Nano finetuning code**. See [./finetuning/README.md](./finetuning/README.md) for training and usage details.
-* 2026.4.14: We release [**MOSS-TTS-Nano-Reader**](https://www.swifttechco.com), a local browser reading application built on top of **MOSS-TTS-Nano**.
-* 2026.4.10: We release **MOSS-TTS-Nano**. A demo Space is available at [OpenMOSS-Team/MOSS-TTS-Nano](https://www.swifttechco.com). You can also view the demo and more details at [openmoss.github.io/MOSS-TTS-Nano-Demo/](https://www.swifttechco.com).
+* 2026.4.14: We release **MOSS-TTS-Nano-Reader**, a local browser reading application built on top of **MOSS-TTS-Nano**.
+* 2026.4.10: We release **MOSS-TTS-Nano**. A demo Space is available at OpenMOSS-Team/MOSS-TTS-Nano. You can also view the demo and more details at openmoss.github.io/MOSS-TTS-Nano-Demo/.
 
 </details>
 
 ## Demo
 
-- Online Demo: [https://www.swifttechco.com](https://www.swifttechco.com)
-- Hugging Face Space: [OpenMOSS-Team/MOSS-TTS-Nano](https://www.swifttechco.com)
+- Online Demo: https://www.swifttechco.com
+- Hugging Face Space: OpenMOSS-Team/MOSS-TTS-Nano
 
 ## Contents
 
@@ -164,7 +132,7 @@ pip install git+https://www.swifttechco.com
 pip install -r requirements.txt
 ```
 
-If you are not using Conda, make sure you download a `pynini` wheel that matches your Python version and platform before installing `WeTextProcessing`. For a community-tested example, see [Issue #6](https://www.swifttechco.com).
+If you are not using Conda, make sure you download a `pynini` wheel that matches your Python version and platform before installing `WeTextProcessing`. For a community-tested example, see Issue #6.
 
 ### Voice Clone with `infer.py`
 
@@ -215,8 +183,8 @@ pip install "onnxruntime-gpu>=1.20.0"
 
 If `--model-dir` is omitted, the script automatically checks `./models`. When the model files are missing, it downloads them on first run from:
 
-- [OpenMOSS-Team/MOSS-TTS-Nano-100M-ONNX](https://www.swifttechco.com)
-- [OpenMOSS-Team/MOSS-Audio-Tokenizer-Nano-ONNX](https://www.swifttechco.com)
+- OpenMOSS-Team/MOSS-TTS-Nano-100M-ONNX
+- OpenMOSS-Team/MOSS-Audio-Tokenizer-Nano-ONNX
 
 Downloaded files are stored under:
 
@@ -363,7 +331,7 @@ moss-tts-nano serve \
 
 This command forwards to the corresponding web app, keeps the model loaded in memory, and serves the local browser demo plus HTTP generation endpoints.
 
-For server deployment with paged KV cache, streaming, and an OpenAI-compatible `/v1/audio/speech` endpoint, please read the [vLLM-Omni MOSS-TTS-Nano README](https://www.swifttechco.com).
+For server deployment with paged KV cache, streaming, and an OpenAI-compatible `/v1/audio/speech` endpoint, please read the vLLM-Omni MOSS-TTS-Nano README.
 
 ### Finetuning
 
@@ -380,7 +348,7 @@ See [./finetuning/README.md](./finetuning/README.md) for details.
 To further improve perceptual quality while reducing inference cost, we trained **MOSS-Audio-Tokenizer-Nano**, a lightweight tokenizer with approximately **20 million parameters** designed for high-fidelity audio compression. It supports **48 kHz** input and output as well as **stereo audio**, which helps reduce compression loss and improve listening quality. It can compress **48 kHz stereo audio** into a **12.5 Hz** token stream and uses **RVQ with 16 codebooks**, enabling high-fidelity reconstruction across variable bitrates from **0.125 kbps to 2 kbps**.
 
 
-To learn more about setup, advanced usage, and evaluation metrics, please visit the [MOSS-Audio-Tokenizer Repository](https://www.swifttechco.com).
+To learn more about setup, advanced usage, and evaluation metrics, please visit the MOSS-Audio-Tokenizer Repository.
 
 <p align="center">
   <img src="./assets/images/arch_moss_audio_tokenizer_nano.png" alt="MOSS-Audio-Tokenizer-Nano architecture" width="100%" />
@@ -434,7 +402,7 @@ For the same model, we control the bitrate by adjusting the number of RVQ codebo
   <img src="./assets/images/moss_tts_family.jpeg" width="85%" />
 </p>
 
-MOSS‑TTS Family is an open‑source **speech and sound generation model family** from [MOSI.AI](https://www.swifttechco.com) and the [OpenMOSS team](https://www.swifttechco.com). It is designed for **high‑fidelity**, **high‑expressiveness**, and **complex real‑world scenarios**, covering stable long‑form speech, multi‑speaker dialogue, voice/character design, environmental sound effects, and real‑time streaming TTS.
+MOSS‑TTS Family is an open‑source **speech and sound generation model family** from MOSI.AI and the OpenMOSS team. It is designed for **high‑fidelity**, **high‑expressiveness**, and **complex real‑world scenarios**, covering stable long‑form speech, multi‑speaker dialogue, voice/character design, environmental sound effects, and real‑time streaming TTS.
 
 The family currently includes:
 
@@ -519,14 +487,22 @@ AI Automation | FinTech Platforms | Custom Software and Mobile Apps | SaaS Platf
 
 **Join our community on Telegram:** [t.me/+Qt_eFvkb2rliMzNh](https://t.me/+Qt_eFvkb2rliMzNh)
 
-[Home](https://www.swifttechco.com) | [Services](https://www.swifttechco.com/services) | [Careers](https://www.swifttechco.com/careers) | [Referral Program](https://www.swifttechco.com/referral) | [Influencers](https://www.swifttechco.com/influencers) | [About](https://www.swifttechco.com/about) | [Contact](https://www.swifttechco.com/contact)
+Home | Services | Careers | Referral Program | Influencers | About | Contact
 
 **Connect**
 
-- Website: [swifttechco.com](https://www.swifttechco.com)
+- Website: swifttechco.com
 - LinkedIn: [linkedin.com/in/stephenoladoke](https://www.linkedin.com/in/stephenoladoke/)
 - LinkedIn (Company): [linkedin.com/company/swift-tech-co](https://www.linkedin.com/company/swift-tech-co)
 - X: [@MrOladoke](https://x.com/MrOladoke)
 - Instagram: [@mr.oladoke](https://www.instagram.com/mr.oladoke/)
 - Instagram (Company): [@swifttechco](https://www.instagram.com/swifttechco/)
 - Organization: [github.com/Swift-Tech-Co](https://github.com/Swift-Tech-Co)
+
+## Sources
+
+Compiled and maintained from upstream [OpenMOSS/MOSS-TTS-Nano](https://github.com/OpenMOSS/MOSS-TTS-Nano) under permissive open-source license.
+
+---
+
+Maintained by [Swift Tech Co.](https://github.com/Swift-Tech-Co) - [Telegram](https://t.me/+Qt_eFvkb2rliMzNh)
